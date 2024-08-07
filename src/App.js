@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import HomeScreen from './screens/HomeScreen';
 
 function App() {
   return (
     <div className="App">
-      <h1>Time to build a netflix clone</h1>
+      <HomeScreen />
     </div>
   );
 }
