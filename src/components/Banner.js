@@ -8,13 +8,14 @@ const Banner = () => {
 
     useEffect(() => {
         async function fetchData(){
-            const request = await axios.get(requests.fetchNetflixOriginals);
+            const req = await axios.get(requests.fetchNetflixOriginals);
+
             setMovie(
-                request.data.results[
-                    Math.floor(Math.random() * request.data.length - 1)
+                req.data.results[
+                    Math.floor(Math.random() * req.data.results.length - 1)
                 ]
             );
-            return request;
+            return req;
         }
 
         fetchData()
@@ -27,27 +28,22 @@ const Banner = () => {
 
   return (
     <header className='banner' style={{
-        backgroundImage: `url("https://cdn.playbackonline.ca/wp/wp-content/uploads/2020/05/Screen-Shot-2020-05-04-at-1.41.10-PM.png")`,
+        backgroundImage: 
+        `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundSize: "cover",
         backgroundPosition: "center center"
 
     }}>
         <div className="banner_contents">
             <h1 className="banner_title">
-                Movie
+                {movie?.title || movie?.name || movie?.original_name}
             </h1> 
             <div className="banner_buttons">
                 <button className='banner_button'>Play</button>
                 <button className='banner_button'>My List</button>
             </div>
             <h1 className="banner_description">{truncateText(
-                `this is a test description 
-                this is a test description 
-                this is a test description
-                this is a test description 
-                this is a test description
-                this is a test description 
-                this is a test description
+                `${movie?.description || movie?.overview}
                 `, 150)}</h1>
         </div>
 
