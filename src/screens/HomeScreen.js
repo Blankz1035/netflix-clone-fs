@@ -16,7 +16,7 @@ const HomeScreen = () => {
         {/* Row */}
 
         <Row 
-          title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow
+          title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} false
         />
         <Row 
           title="Trending Now" fetchUrl={requests.fetchTrendingAllWeek} isLargeRow
