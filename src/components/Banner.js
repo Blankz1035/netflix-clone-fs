@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from "../scripts/axios"
+import requests from "../scripts/requests"
 import "../css/Banner.css"
 
 const Banner = () => {
+    const [movie, setMovie] = useState([]);
+
+    useEffect(() => {
+        async function fetchData(){
+            const request = await axios.get(requests.fetchNetflixOriginals);
+            setMovie(
+                request.data.results[
+                    Math.floor(Math.random() * request.data.length - 1)
+                ]
+            );
+            return request;
+        }
+
+        fetchData()
+    }, [])
+    
     function truncateText(string, n) {
         return string?.length > n ? string.substr(0, n-1) + '...' : string;
     }
+
+
   return (
     <header className='banner' style={{
         backgroundImage: `url("https://cdn.playbackonline.ca/wp/wp-content/uploads/2020/05/Screen-Shot-2020-05-04-at-1.41.10-PM.png")`,
@@ -28,7 +48,7 @@ const Banner = () => {
                 this is a test description
                 this is a test description 
                 this is a test description
-                `, 100)}</h1>
+                `, 150)}</h1>
         </div>
 
         <div className="banner--fadeBottom" />
