@@ -1,0 +1,44 @@
+.loginScreen {
+    position: relative;
+    height: 100%;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/85e22987-d2dd-46ca-b8b7-65cd0e31c24a/105c47f6-4519-43eb-9021-95c273f27108/BR-en-20201123-popsignuptwoweeks-perspective_alpha_website_small.jpg') center no-repeat;
+    background-size: cover;
+}
+.loginScreen_logo {
+    left: 0;
+    width: 150px;
+    position: fixed;
+    object-fit: contain;
+    padding-left: 20px;
+}
+.loginScreen_background {
+  
+}
+
+.loginScreen_gradient {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+}
+.loginScreen_button {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+}
+
+.loginScreen_body {
+    
+}
