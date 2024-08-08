@@ -16,28 +16,28 @@ const HomeScreen = () => {
         {/* Row */}
 
         <Row 
-          title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} false
+          title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow
         />
         <Row 
-          title="Trending Now" fetchUrl={requests.fetchTrendingAllWeek} isLargeRow
+          title="Trending Now" fetchUrl={requests.fetchTrendingAllWeek} 
         />
         <Row 
-          title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} isLargeRow
+          title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} 
         />
         <Row 
-          title="Action Movies" fetchUrl={requests.fetchActionMovies} isLargeRow
+          title="Action Movies" fetchUrl={requests.fetchActionMovies} 
         />
         <Row 
           title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} isLargeRow
         />
         <Row 
-          title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} isLargeRow
+          title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} 
         />
         <Row 
           title="Romantic Movies" fetchUrl={requests.fetchRomanceMovies} isLargeRow
         />
         <Row 
-          title="Documentaries" fetchUrl={requests.fetchDocumentaries} isLargeRow
+          title="Documentaries" fetchUrl={requests.fetchDocumentaries} 
         />
         HomeScreen
     
