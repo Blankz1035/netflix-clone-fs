@@ -25,7 +25,6 @@ const ProfileScreen = () => {
                 <div className="profileScreen_details">
                     <h2>{user.email}</h2>
                     <div className="profileScreen_plans">
-                        <h3>Plans (Current Plan) </h3>
                         <PlansComponent />
                         <button 
                             className='profileScreen_signOut'

@@ -25,3 +25,19 @@
     cursor: pointer;
     font-weight: 600;
 }
+
+.plansComponent_plan_disabled > button {
+    background-color: gray !important;
+    cursor: default;
+}
+
+.plansComponent > h3, p {
+    font-size: 0.9rem;
+    /* border-bottom: 1px solid #282c2d; */
+    padding-bottom: 10px;
+}
+.plansComponent > p {
+    font-size: 0.7rem;
+    border-bottom: 1px solid #282c2d;
+    padding-bottom: 10px;
+}
