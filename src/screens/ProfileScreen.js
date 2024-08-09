@@ -4,7 +4,7 @@ import Nav from '../components/Nav'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../features/userSlice'
 import { auth } from '../firebase/firebase'
-import { replace, useNavigate  } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import PlansComponent from '../components/PlansComponent'
 
 const ProfileScreen = () => {
