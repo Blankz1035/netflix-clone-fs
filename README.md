@@ -1,43 +1,91 @@
-# Getting Started with Create React App and Redux
+# Netflix Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project is a full-stack Netflix clone built using React for the frontend, Redux for state management, Firebase for authentication, Stripe for payment processing, and the IMDb API for fetching movie and TV show data. The app supports user authentication, subscription payments, and streaming of movies and TV shows.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Demo](#demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup and Installation](#setup-and-installation)
+- [Running the App](#running-the-app)
+- [Credit](#credit)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+You can check out the live demo of the app here: [Netflix Clone Demo](https://netflix-clone-fs.web.app)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Home Screen](../images/start.png)
+![Profile Screen](../images/profile.png)
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **User Authentication**: Secure sign-up and login using Firebase Authentication.
+- **Stripe Payments**: Integrated Stripe for managing subscription payments.
+- **Subscription Tiers**: Users can subscribe to different plans (e.g., Basic, Standard, Premium).
+- **Redux for State Management**: Centralized state management using Redux.
+- **Movie and TV Show Data**: Fetches data from the IMDb API, including details, ratings, and trailers.
+- **Responsive Design**: Fully responsive and works on all device sizes.
+- **User Profiles**: Manage profile.
+- **Movie/TV Show Details**: View detailed information, including a synopsis (more available in API).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend
+- **React**: JavaScript library for building user interfaces.
+- **Redux**: State management library.
+- **React Router DOM**: For routing and navigation.
+- **CSS Modules**: Scoped and modular CSS.
 
-### `npm run eject`
+### Backend
+- **Firebase**: Used for authentication, database, and hosting.
+- **Stripe**: Payment processing and subscription management.
+- **IMDb API**: Fetches movie and TV show data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setup and Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Node.js and npm installed on your local machine.
+- A Firebase project set up with authentication enabled.
+- A Stripe account for handling payments.
+- An IMDb API key.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
 
-## APP URL
-https://netflix-clone-fs.web.app
+1. Clone the repository and install dependencies:
+   ```bash
+   git clone https://github.com/your-username/netflix-clone.git
+   cd netflix-clone
+   npm install
+
+2. Create .env file for variables:
+   ```bash
+   REACT_APP_API_KEY = YourKey
+
+## Running the APP
+### To run the app in development mode, use the following command:
+```bash
+    npm start
+```
+Open http://localhost:3000 to view it in the browser. The page will reload if you make edits.
+### Production build
+```bash
+    npm run build
+```
+This will create a build directory with the optimized production build.
+
+### Deploy to Firebase
+```bash
+    npm run build
+    firebase login
+    firebase init (to create app under your project)
+    firebase deploy
+```
+This will deploy your app to Firebase Hosting.
+
+#### Credit
+This project was inspired by https://www.youtube.com/watch?v=HW5roUF2RLg&t=5016s&ab_channel=SonnySangha
+
