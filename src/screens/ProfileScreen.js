@@ -24,7 +24,7 @@ const ProfileScreen = () => {
                 <div className="profileScreen_details">
                     <h2>{user.email}</h2>
                     <div className="profileScreen_plans">
-
+                        <h3>Plans (Current Plan: premium) </h3>
                         <button 
                             className='profileScreen_signOut'
                             onClick={() => {
