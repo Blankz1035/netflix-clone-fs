@@ -17,8 +17,8 @@ This project is a full-stack Netflix clone built using React for the frontend, R
 
 You can check out the live demo of the app here: [Netflix Clone Demo](https://netflix-clone-fs.web.app)
 
-![Home Screen](../images/start.png)
-![Profile Screen](../images/profile.png)
+![Home Screen](./images/start.png)
+![Profile Screen](./images/profile.png)
 
 ## Features
 
