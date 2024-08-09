@@ -18,6 +18,7 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged(userAuth => {
       if(userAuth){
         // logged in
+        console.log("User logged in:", userAuth);
         dispatch(login({
           uid: userAuth.uid,
           email: userAuth.email
@@ -25,26 +26,29 @@ function App() {
       }
       else {
         // logged out.
-        dispatch(logout) // reset user back to null
+        dispatch(logout()) // reset user back to null
+        console.log("User logged out");
       }
     });
 
     return unsubscribe;
-  },[])
+  },[dispatch])
 
 
   return (
     <div className="app">
       <Router>
-        {!user ? (
-            <Route exact path="/" element={<LoginScreen />}/>
+        <Routes>
+          {!user ? (
+            <Route path="/" element={<LoginScreen />} />
           ) : (
-          <Routes>
-              <Route exact path="/" element={<HomeScreen/>}/>
-              <Route exact path="profile" element={<ProfileScreen/>}/>  
-          </Routes>
-        )}
-    </Router>
+            <>
+              <Route path="/" element={<HomeScreen />} />
+              <Route path="/profile" element={<ProfileScreen />} />
+            </>
+          )}
+        </Routes>
+      </Router>
     </div>
   );
 }
