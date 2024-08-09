@@ -57,8 +57,8 @@ You can check out the live demo of the app here: [Netflix Clone Demo](https://ne
 
 1. Clone the repository and install dependencies:
    ```bash
-   git clone https://github.com/your-username/netflix-clone.git
-   cd netflix-clone
+   git clone https://github.com/blankz1035/netflix-clone-fs.git
+   cd netflix-clone-fs
    npm install
 
 2. Create .env file for variables:
