@@ -17,5 +17,5 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore(); // subscription use.
 const auth = firebase.auth();
 
-export { auth }  // multipl explicit.
+export { auth, firebaseApp }  // multipl explicit.
 export default db; // only one
