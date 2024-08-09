@@ -25,6 +25,10 @@ const PlanComponent = () => {
     }).catch(error => alert(`Issue in plan retrieval: ${error.message}`));
   }, [])
 
+  const loadCheckout = async (priceId) => {
+
+  }
+
   return (
     <div className='plansComponent'>
       { Object.entries(products).map(( [ productId, productData] ) => {
@@ -32,11 +36,11 @@ const PlanComponent = () => {
 
         return (
           <div className="plansComponent_plan">
-            <div className="plansComponen_info">
+            <div className="plansComponent_info">
               <h5>{productData.name}</h5>
               <h6>{productData.description}</h6>
             </div>
-            <button>
+            <button onClick={() => loadCheckout(productData.prices.priceId)}>
               Subscribe
             </button>
           </div>
