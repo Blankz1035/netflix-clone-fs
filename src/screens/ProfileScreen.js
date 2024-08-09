@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { selectUser } from '../features/userSlice'
 import { auth } from '../firebase/firebase'
 import { replace, useNavigate  } from "react-router-dom";
+import PlansComponent from '../components/PlansComponent'
 
 const ProfileScreen = () => {
     const user = useSelector(selectUser);
@@ -24,7 +25,8 @@ const ProfileScreen = () => {
                 <div className="profileScreen_details">
                     <h2>{user.email}</h2>
                     <div className="profileScreen_plans">
-                        <h3>Plans (Current Plan: premium) </h3>
+                        <h3>Plans (Current Plan) </h3>
+                        <PlansComponent />
                         <button 
                             className='profileScreen_signOut'
                             onClick={() => {
